@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.css">
+    <script src="./jquery-3.6.0.min.js" type="text/javascript"></script>
+    
+</head>
+<body>
+    <h2><?php 
+
+        if (isset($_POST['enviar'])){
+            if(!empty($_POST['name']) && !empty($_POST['asunto']) && !empty($_POST['mensaje']) && !empty($_POST['email'])){
+                 $name = $_POST['name'];
+                 $asunto = $_POST['name'];
+                 $mensaje = $_POST['mensaje'];
+                 $email = $_POST['email'];
+        
+                 $header = "From: noreply@example.com" . "\r\n";
+                 $header.= "Reply-To: noreply@example.com" . "\r\n";
+                 $header.= "X-Mailer: PHP/". phpversion();
+                 $mail = mail($email,$asunto,$mensaje, $header); 
+            }
+        }
+        ?></h2>
+    <header>
+        <div class="nav">
+            <nav class="navbar">
+                <a href="#" class="nav-branding">TURING-IA</a>
+    
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tableau</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Contacto</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="text-header">
+            <h1 class="title-header" id="welcome">Bienvenido</h1>
+            <h3 class="subtitle-header">Hacemos los datos fáciles de usar</h3>
+        </div>
+        
+
+    </header>
+    
+    <main>
+        <section id="querealizamos">
+            <div class="realizamos">
+            <div class="realizamos-content">
+                <div>
+                    <p class="title">¿QUÉ REALIZAMOS?</p>
+                    <p class="text">Contribuimos con su empresa para mejorar la toma de decisiones a través de sus datos.</p>
+                </div>
+                
+            </div>
+            <div class="realizamos-content">
+                <div class="button-container">
+                    <a class="btn" href="#">Más información</a>
+                </div>
+                
+            </div>
+        </div>
+            
+            
+        </section>
+        <section id="somos">
+            <div class="somos-info">
+                <div class="somos-img">
+                    <img src="./assets/imgs/personaEscribiendo.svg" alt="">
+                </div>
+                <div class="somos-text">
+                    <p class="title">LA MANERA IDEAL PARA MANEJAR TUS DATOS</p>
+                    <p class="text">Somos una empresa Consultora de Big Data en México, desde hace 13 años proporcionamos servicios en Business Analytics mediante Knowledge Discovery in Database (KDD).</p>
+                </div>
+            </div>
+            
+            
+            
+        </section>
+        <section id="tecnologias">
+            <p class="title">TECNOLOGÍAS QUE UTILIZAMOS</p>
+            <div>
+            <img src="./assets/imgs/tableauBN.png" alt="">
+            <img src="./assets/imgs/salesforceBN.png" alt="">
+            <img src="./assets/imgs/pmiBN.png" alt="">
+            <img src="./assets/imgs/scrumBN.png" alt="">
+            </div>
+            
+
+        </section>
+        <section id="ofrecemos">
+            <p class="title" id="ofrecemos-text">LO QUE TE OFRECEMOS</p>
+            <div class="carrousel">
+                <article>
+                    <div class="div-text">
+                        <p class="carrousel-title">IMPLEMENTACIÓN DE PROYECTOS (BUSINESS ANALYST)</p>
+                        <p class="carrousel-text">Nuestra metodología de servicios se encuentra orientada en los estándares del Project Management Institute (PMI) ® e International Project Management Association (IPMA). Esto nos permite contar con las competencias para coordinar equipos de trabajo en el inicio, planeación, construcción, monitoreo y control de las actividades y recursos involucrados en un proyecto a partir de los objetivos y requerimientos de nuestro cliente.</p>
+                    </div>
+                    <div class="div-img">
+                        <img class="carrousel-img" src="https://www.sydle.com/es/blog/images/business-intelligence-5f79e24a3207037874c97e08/business-intelligence-BI-para-que-serve.jpg" alt="">
+                    </div>
+                </article>
+                <article>
+                    <div class="div-text">
+                        <p class="carrousel-title">DESARROLLO DE APLICACIONES</p>
+                        <p class="carrousel-text">En un mundo moderno, con la cantidad de problemas y su complejidad cada vez es mayor, el desarrollo de aplicaciones, una herramienta para obtener soluciones precisas, dándole tareas repetitivas a la computadora y logrando así la "automatización" de procesos que todavía requieren la intervención de las personas en tareas repetitivas.</p>
+                    </div>
+                    <div class="div-img">
+                        <img class="carrousel-img" src="./assets/imgs/desarrolloApps.jpeg" alt="">
+                    </div>
+                    
+                </article>
+                <article>
+                    <div class="div-text">
+                        <p class="carrousel-title">WORKSHOP (BLUE PRINT)</p>
+                        <p class="carrousel-text">Su estrategia debe abarcar la gestión de personas, procesos y cambios, incluida la identificación de casos de uso comercial inmediatos, la definición de roles, responsabilidades, el establecimiento de medidas para evaluar el éxito y el impacto..</p>
+                    </div>
+                    <div class="div-img">
+                        <img class="carrousel-img" src="https://theresearchnexus.com/wp-content/uploads/2020/10/Untitled-design.jpg" alt="">
+                    </div>
+                </article>
+                <article>
+                    <div class="div-text">
+                        <p class="carrousel-title">CAPACITACIÓN</p>
+                        <p class="carrousel-text">Nuestra gama de cursos de Tableau incluye: Tableau Prep Tableau Desktop Visual Analytics Tableau Server Adicionalmente ofrecemos cursos sobre: Business Intelligence, Data Mining, Big Data, Data to Insight.</p>
+                    </div>
+                    <div class="div-img">
+                        <img class="carrousel-img" src="https://theresearchnexus.com/wp-content/uploads/2020/10/Untitled-design.jpg" alt="">
+                    </div>
+                </article>
+                <article>
+                    <div class="div-text">
+                        <p class="carrousel-title">VENTA DE SOFTWARE</p>
+                        <p class="carrousel-text">Nos dedicamos a la venta de licencias de software, podemos recomendarle los sistemas que de acuerdo a sus necesidades son más adecuados.</p>
+                    </div>
+                    <div class="div-img">
+                        <img class="carrousel-img" src="https://theresearchnexus.com/wp-content/uploads/2020/10/Untitled-design.jpg" alt="">
+                    </div>
+                </article>
+                <article>
+                    <div class="div-text">
+                        <p class="carrousel-title">VENTA DE HARDWARE</p>
+                        <p class="carrousel-text">Trabajamos con los mejores proveedores de México y tenemos la capacidad de cubrir cualquier necesidad que tenga de hardware. Redes, computadoras, impresoras y accesorios.</p>
+                    </div>
+                    <div class="div-img">
+                        <img class="carrousel-img" src="https://theresearchnexus.com/wp-content/uploads/2020/10/Untitled-design.jpg" alt="">
+                    </div>
+                </article>
+            </div>
+
+            <div class="navigation">
+                <div class="navigation-left">
+                    <img src="./assets/icons/left.svg" alt="">
+                </div>
+                <div role="tablist" class="navigation-points">
+                    
+                </div>
+                <div class="navigation-right">
+                    <img src="./assets/icons/right.svg" alt="">
+                </div>
+            </div>
+            
+
+        </section>
+        <section id="historias">
+            <p class="title" id="title-historias">HISTORIAS DE CLIENTES</p>
+            <div class="carrousel-historias">
+                <article>
+                    <img src="https://turing-ia.com/assets/img/redhatteaser.jpg" alt="">
+                    <div class="card">
+                        <p>Red Hat adopta el Blueprint de Tableau y Tableau Online, y profundiza en la cultura de datos con más de 4500 empleados en menos de un año</p>
+                        <div class="card-indicator">Red hat</div>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://turing-ia.com/assets/img/verizon-homepage-tile-final-2x.jpg" alt="">
+                    <div class="card">
+                        <p>Verizon usa Tableau para reducir las llamadas de soporte en un 43 % y así mejorar la experiencia del cliente
+                        </p>
+                        <div class="card-indicator" id="verizon">Red hat</div>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://turing-ia.com/assets/img/wholefoodsteaser1.jpg" alt="">
+                    <div class="card">
+                        <p>Whole Foods Market democratiza el acceso a los datos en sus 460 tiendas para 18 000 empleados gracias a Tableau
+                        </p>
+                        <div class="card-indicator" id="wholefoods">Whole Foods</div>
+                    </div>
+                </article>
+                <article>
+                    <img src="https://turing-ia.com/assets/img/redhatteaser.jpg" alt="">
+                    <div class="card">
+                        <p>Red Hat adopta el Blueprint de Tableau y Tableau Online, y profundiza en la cultura de datos con más de 4500 empleados en menos de un año</p>
+                        <div class="card-indicator">Red hat</div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="navigation">
+                <div class="navigation-left2">
+                    <img src="./assets/icons/left.svg" alt="">
+                </div>
+                <div role="tablist" class="navigation-points2">
+                    
+                </div>
+                <div class="navigation-right2">
+                    <img src="./assets/icons/right.svg" alt="">
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <p class="title">CONTACTO</p>
+            <div class="contact-content">
+                <div class="content-left">
+                    <div class="contact-info">
+                        <div class="contact-text">
+                            <p>EMAIL</p>
+                            <p>contacto@turing-ia.com</p>
+                            <p>HORARIO</p>
+                            <p>Lunes a Viernes <br> 7 a.m. - 7 p.m. <br> UTC-6</p>
+                        </div>
+                        <div class="contact-text">
+                            <p>TELÉFONO</p>
+                            <p>+52 (722) 533-6638</p>
+                            <p>DIRECCIÓN</p>
+                            <p>Av. Insurgentes Sur 601, <br> Nápoles, Benito Juárez, 03810, Ciudad de México, CDMX</p>
+                        </div>
+                    </div>
+        
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.3402696376966!2d-99.17376778255615!3d19.397698599999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff7769001035%3A0x8908d745e6168858!2sTuring%20-%20Inteligencia%20Artificial!5e0!3m2!1ses-419!2smx!4v1657989127344!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="content-right">
+                    <form class="contact-form" method="post">
+                        <div class="line-form">
+                            <input class="form-text" type="text" placeholder="Nombre (Requerido)" name="name">
+                        <input class="form-text" type="text" placeholder="Email" name="email">
+                        </div>
+                        <div class="line-form">
+                            <input class="form-text" type="text" placeholder="Telefono" name="telefono">
+                            <input class="form-text" type="text" placeholder="Empresa" name="asunto">
+                        </div>
+
+                        <div class="line-form">
+                            <textarea class="form-text" rows="7" cols="45" placeholder="Mensaje" name="mensaje"></textarea>
+                        </div>
+                        
+                        
+                        
+                        <input class="form-button" type="submit" value="CONTACTAR" name="enviar">
+                    </form>
+                </div>
+                
+            </div>
+            
+
+            
+
+            
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <p class="footer-title">TURING-IA</p>
+                
+                <p class="footer-subtitle">Servicios</p>
+                <p class="footer-text">Implementación de Proyectos (Business Analyst)</p>
+                <p class="footer-text">Workshop (Blue Print)</p>
+                <p class="footer-text">Capacitación</p>
+                <p class="footer-text">Venta de Software</p>
+                <p class="footer-text">Venta de Hardware</p>
+                <p class="footer-text">Desarrollo de Aplicaciones</p>
+                <p class="footer-text">Balanced Scorecard</p>
+                
+                </div>
+                <div class="footer-section">
+                    <p class="footer-subtitle">Inscríbete a nuestro newsletter</p>
+                    <div class="footer-form">
+                        <form action="">
+                            <input type="text" placeholder="Correo electrónico">
+                        </form>
+                        <img src="./assets/icons/send.svg" alt="">
+                    </div>
+                    <div class="footer-social">
+                        <img src="./assets/icons/facebook.svg" alt="">
+                        <img src="./assets/icons/twitter.svg" alt="">
+                        <img src="./assets/icons/instagram.svg" alt="">
+                    <img src="./assets/icons/linkedin.svg" alt="">
+                    </div>
+                </div>
+        </div>
+        
+    </footer>
+    <div class="last">© Copyright Turing Inteligencia Artificial. Derechos reservados</div>
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1.7.3/glider.min.js"></script>
+    <script src="./js/index.js"></script>
+       
+</body>
+
+
+</html>
